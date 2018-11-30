@@ -18,27 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much did you just waste?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIO-SI-dPu">
-                                <rect key="frame" x="16" y="75" width="343" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-4g-Umd">
-                                <rect key="frame" x="16" y="140" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXF-YO-UrP">
-                                <rect key="frame" x="16" y="178" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Charge :("/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ewn-WM-4FH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much did you just waste?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIO-SI-dPu">
+                                        <rect key="frame" x="8" y="8" width="359" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="WQ9-WC-PtD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-4g-Umd">
+                                        <rect key="frame" x="8" y="73" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXF-YO-UrP">
+                                        <rect key="frame" x="8" y="111" width="359" height="256"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="256" id="NqZ-R1-Km1"/>
+                                        </constraints>
+                                        <state key="normal" title="Charge :("/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qQI-4g-Umd" firstAttribute="leading" secondItem="Ewn-WM-4FH" secondAttribute="leading" constant="8" id="0qd-yM-GLc"/>
+                                    <constraint firstItem="AIO-SI-dPu" firstAttribute="top" secondItem="Ewn-WM-4FH" secondAttribute="top" constant="8" id="36N-dX-ErC"/>
+                                    <constraint firstItem="AIO-SI-dPu" firstAttribute="leading" secondItem="Ewn-WM-4FH" secondAttribute="leading" constant="8" id="4h9-BB-WkK"/>
+                                    <constraint firstItem="aXF-YO-UrP" firstAttribute="leading" secondItem="Ewn-WM-4FH" secondAttribute="leading" constant="8" id="6kr-7b-cy7"/>
+                                    <constraint firstAttribute="bottom" secondItem="aXF-YO-UrP" secondAttribute="bottom" constant="8" id="C76-Ul-cLI"/>
+                                    <constraint firstItem="aXF-YO-UrP" firstAttribute="top" secondItem="qQI-4g-Umd" secondAttribute="bottom" constant="8" id="bwU-nK-3qs"/>
+                                    <constraint firstAttribute="trailing" secondItem="AIO-SI-dPu" secondAttribute="trailing" constant="8" id="euq-GT-xS4"/>
+                                    <constraint firstAttribute="trailing" secondItem="aXF-YO-UrP" secondAttribute="trailing" constant="8" id="nqc-Pq-jm4"/>
+                                    <constraint firstAttribute="trailing" secondItem="qQI-4g-Umd" secondAttribute="trailing" constant="8" id="uiw-ih-6BE"/>
+                                    <constraint firstItem="qQI-4g-Umd" firstAttribute="top" secondItem="AIO-SI-dPu" secondAttribute="bottom" constant="8" id="xpx-MP-1Nn"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oc-TW-3vh">
+                                <rect key="frame" x="0.0" y="447" width="375" height="171"/>
+                                <connections>
+                                    <segue destination="D6F-ch-IKD" kind="embed" id="Cay-lg-UJC"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8oc-TW-3vh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ab9-da-wEZ"/>
+                            <constraint firstItem="Ewn-WM-4FH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EB6-Ug-Zb8"/>
+                            <constraint firstItem="Ewn-WM-4FH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lbx-1U-25r"/>
+                            <constraint firstItem="8oc-TW-3vh" firstAttribute="top" secondItem="Ewn-WM-4FH" secondAttribute="bottom" constant="8" id="QQI-8Y-8Aj"/>
+                            <constraint firstItem="8oc-TW-3vh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XXa-OI-qAl"/>
+                            <constraint firstItem="Ewn-WM-4FH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eA6-Zv-OCs"/>
+                            <constraint firstItem="8oc-TW-3vh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="syu-Tj-7gC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bp1-Wl-A1P"/>
@@ -86,6 +122,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JzZ-ZX-kGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="169" y="115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="reg-B8-fTX">
+            <objects>
+                <viewController id="D6F-ch-IKD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="neL-KV-PLg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Swb-gE-3GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="618"/>
         </scene>
     </scenes>
 </document>
