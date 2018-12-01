@@ -30,7 +30,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" placeholder="Price" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-4g-Umd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-4g-Umd">
                                         <rect key="frame" x="8" y="73" width="359" height="30"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -43,6 +43,12 @@
                                         </constraints>
                                         <state key="normal" title="Charge :("/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-Pu-NFd">
+                                        <rect key="frame" x="16" y="78" width="11" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -51,8 +57,10 @@
                                     <constraint firstItem="AIO-SI-dPu" firstAttribute="leading" secondItem="Ewn-WM-4FH" secondAttribute="leading" constant="8" id="4h9-BB-WkK"/>
                                     <constraint firstItem="aXF-YO-UrP" firstAttribute="leading" secondItem="Ewn-WM-4FH" secondAttribute="leading" constant="8" id="6kr-7b-cy7"/>
                                     <constraint firstAttribute="bottom" secondItem="aXF-YO-UrP" secondAttribute="bottom" constant="8" id="C76-Ul-cLI"/>
+                                    <constraint firstItem="SBH-Pu-NFd" firstAttribute="leading" secondItem="Ewn-WM-4FH" secondAttribute="leading" constant="16" id="ETc-42-pU6"/>
                                     <constraint firstItem="aXF-YO-UrP" firstAttribute="top" secondItem="qQI-4g-Umd" secondAttribute="bottom" constant="8" id="bwU-nK-3qs"/>
                                     <constraint firstAttribute="trailing" secondItem="AIO-SI-dPu" secondAttribute="trailing" constant="8" id="euq-GT-xS4"/>
+                                    <constraint firstItem="SBH-Pu-NFd" firstAttribute="baseline" secondItem="qQI-4g-Umd" secondAttribute="baseline" id="mF2-x6-Cgc"/>
                                     <constraint firstAttribute="trailing" secondItem="aXF-YO-UrP" secondAttribute="trailing" constant="8" id="nqc-Pq-jm4"/>
                                     <constraint firstAttribute="trailing" secondItem="qQI-4g-Umd" secondAttribute="trailing" constant="8" id="uiw-ih-6BE"/>
                                     <constraint firstItem="qQI-4g-Umd" firstAttribute="top" secondItem="AIO-SI-dPu" secondAttribute="bottom" constant="8" id="xpx-MP-1Nn"/>
