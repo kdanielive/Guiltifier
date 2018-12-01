@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         chargeButton.layer.cornerRadius = 5
         chargeButton.layer.borderWidth = 0.5
         chargeButton.layer.borderColor = UIColor.blue.cgColor
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Entry", in: context)
     }
     
     override func didReceiveMemoryWarning() {
