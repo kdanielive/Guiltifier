@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -24,6 +25,16 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Entry", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let price = priceTextField.text
+        self.view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,4 +44,3 @@ class ViewController: UIViewController {
 
 
 }
-
