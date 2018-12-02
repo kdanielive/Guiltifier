@@ -46,8 +46,6 @@
                                         <state key="normal" title="Charge :("/>
                                         <connections>
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5RY-El-aoZ"/>
-                                            <action selector="pressEnded:" destination="BYZ-38-t0r" eventType="touchCancel" id="ys9-y5-57x"/>
-                                            <action selector="whilePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="xV9-po-Ix9"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-Pu-NFd">

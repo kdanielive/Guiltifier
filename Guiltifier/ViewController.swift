@@ -21,11 +21,7 @@ class ViewController: UIViewController {
         chargeButton.layer.cornerRadius = 5
         chargeButton.layer.borderWidth = 0.5
         chargeButton.layer.borderColor = UIColor.blue.cgColor
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Entry", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,7 +29,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        let price = priceTextField.text
+        let price = priceTextField.text!
+        print(price)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Entry", in: context)
+        let newEntry = NSManagedObject(entity: entity!, insertInto: context)
+        newEntry.setValue(price, forKey: "price")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+        
         self.view.endEditing(true)
     }
     
