@@ -39,11 +39,13 @@ class ViewController: UIViewController {
         
         do {
             try managedContext.save()
-        } catch {
-            print("Failed saving")
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
         }
         
         self.view.endEditing(true)
+        priceTextField.text = ""
+        
     }
     
     override func didReceiveMemoryWarning() {
