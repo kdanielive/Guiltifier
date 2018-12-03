@@ -9,7 +9,9 @@
 import UIKit
 
 class HomePageTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet var priceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

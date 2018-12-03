@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
         priceTextField.text = ""
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload"), object: nil)
     }
     
     override func didReceiveMemoryWarning() {

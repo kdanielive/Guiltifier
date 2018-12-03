@@ -10,22 +10,30 @@ import UIKit
 import CoreData
 
 class HomePageTableViewController: UITableViewController {
-
+    
+    var numRows = 0
+    var entries = [Entry]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
-        userFetch.fetchLimit = 1
+        let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
         //userFetch.predicate = NSPredicate(format: "price = %@", "34")
-        userFetch.sortDescriptors = [NSSortDescriptor.init(key: "price", ascending: true)]
-        let users = try! managedContext.fetch(userFetch)
+        entriesFetch.sortDescriptors = [NSSortDescriptor.init(key: "price", ascending: true)]
         
-        let firstEntry: Entry = users.first as! Entry
-        print(firstEntry.price)
-
+        entries = try! managedContext.fetch(entriesFetch) as! [Entry]
+        
+        for ent in entries {
+            print(ent.price!)
+        }
+        
+        numRows = entries.count
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadEntries), name: NSNotification.Name(rawValue: "reload"), object: nil)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -47,20 +55,23 @@ class HomePageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return numRows
     }
     
     
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homePageTableViewCell", for: indexPath) as! HomePageTableViewCell
 
         // Configure the cell...
+        let row = indexPath.row
+        print(row)
+        cell.priceLabel.text = entries[row].price!
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -106,6 +117,10 @@ class HomePageTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @objc func reloadEntries() {
+        self.tableView.reloadData()
+        print("Reloading")
+    }
 
 }
 
