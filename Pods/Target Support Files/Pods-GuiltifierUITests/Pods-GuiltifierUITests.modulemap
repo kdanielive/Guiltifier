@@ -1,0 +1,6 @@
+framework module Pods_GuiltifierUITests {
+  umbrella header "Pods-GuiltifierUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
