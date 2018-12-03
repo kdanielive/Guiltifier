@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABAC6BCF21B4C9A400295B7D /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */; };
+		ABAC6BD121B4C9B100295B7D /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */; };
 		ABB9F5C821B0E44E005CB93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F5C721B0E44E005CB93E /* AppDelegate.swift */; };
 		ABB9F5CA21B0E44E005CB93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F5C921B0E44E005CB93E /* ViewController.swift */; };
 		ABB9F5CD21B0E44E005CB93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB9F5CB21B0E44E005CB93E /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		ABB9F5C421B0E44E005CB93E /* Guiltifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guiltifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB9F5C721B0E44E005CB93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB9F5C921B0E44E005CB93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		ABB9F5C621B0E44E005CB93E /* Guiltifier */ = {
 			isa = PBXGroup;
 			children = (
+				ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */,
+				ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */,
 				ABB9F5C721B0E44E005CB93E /* AppDelegate.swift */,
 				ABB9F5C921B0E44E005CB93E /* ViewController.swift */,
 				ABB9F5CB21B0E44E005CB93E /* Main.storyboard */,
@@ -272,6 +278,8 @@
 				ABB9F5D021B0E44E005CB93E /* Guiltifier.xcdatamodeld in Sources */,
 				ABB9F5CA21B0E44E005CB93E /* ViewController.swift in Sources */,
 				ABB9F5C821B0E44E005CB93E /* AppDelegate.swift in Sources */,
+				ABAC6BCF21B4C9A400295B7D /* SummaryTableViewCell.swift in Sources */,
+				ABAC6BD121B4C9B100295B7D /* SummaryTableViewController.swift in Sources */,
 				ABB9F5F921B0FA45005CB93E /* HomePageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
