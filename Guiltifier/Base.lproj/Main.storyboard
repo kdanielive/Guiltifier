@@ -37,7 +37,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLM-O6-yCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="-645"/>
+            <point key="canvasLocation" x="1705" y="-655"/>
         </scene>
         <!--Guiltifier-->
         <scene sceneID="tne-QT-ifu">
@@ -186,7 +186,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hr3-cQ-nD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="337"/>
+            <point key="canvasLocation" x="1705" y="-67"/>
         </scene>
         <!--Main-->
         <scene sceneID="ffg-Mu-4jv">
@@ -291,7 +291,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crC-zN-4Xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="-129"/>
+            <point key="canvasLocation" x="-657" y="134"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="8En-uR-Ve3">
@@ -310,7 +310,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi5-m5-byB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1471" y="-129"/>
+            <point key="canvasLocation" x="-1412" y="134"/>
         </scene>
         <!--Summary-->
         <scene sceneID="HdD-NJ-7lT">
@@ -379,8 +379,9 @@
         <image name="icons8-menu-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A1W-Ac-Cs3"/>
+        <segue reference="Rt8-kF-ZYY"/>
+        <segue reference="uE4-84-3n4"/>
         <segue reference="hqa-FZ-cXi"/>
-        <segue reference="Gtd-AO-Dt9"/>
+        <segue reference="sQG-t9-OPL"/>
     </inferredMetricsTieBreakers>
 </document>
