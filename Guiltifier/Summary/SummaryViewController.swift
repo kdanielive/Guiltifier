@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class SummaryViewController: UIViewController {
 
+    @IBOutlet var endLineView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return  }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
+        let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 

@@ -67,7 +67,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXF-YO-UrP">
                                         <rect key="frame" x="8" y="111" width="359" height="256"/>
-                                        <color key="backgroundColor" red="0.78701521960779119" green="0.96397344559585496" blue="0.79283838549559094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.92035700410340682" green="0.9269095593836002" blue="0.96397344559585496" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="256" id="NqZ-R1-Km1"/>
                                         </constraints>
@@ -248,7 +248,7 @@
             </objects>
             <point key="canvasLocation" x="164" y="-572"/>
         </scene>
-        <!--Summary View Controller-->
+        <!--Guiltifier-->
         <scene sceneID="o5p-mY-3RH">
             <objects>
                 <viewController id="yNc-YN-Wdu" customClass="SummaryViewController" customModule="Guiltifier" customModuleProvider="target" sceneMemberID="viewController">
@@ -272,7 +272,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="wbI-u3-JY2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="R27-8d-pNp"/>
+                    <navigationItem key="navigationItem" title="Guiltifier" id="HIj-1j-Udd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="C2l-Up-8aU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="endLineView" destination="LZB-hA-EXp" id="tmj-rT-l0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1D-fc-3e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
