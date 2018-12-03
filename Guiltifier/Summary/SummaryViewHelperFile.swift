@@ -17,9 +17,15 @@ func calculateSections() -> Int {
     let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
     let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
     
-    for entry in entries {
-        
-    }
+    var entrySet = Set<String>()
     
-    return 0
+    for entry in entries {
+        let rawTime = entry.time!
+        let stringIndex = rawTime.index(rawTime.startIndex, offsetBy: 9)
+        let date = String(rawTime[...stringIndex])
+        
+        entrySet.insert(date)
+    }
+    print(entrySet.count)
+    return entrySet.count
 }

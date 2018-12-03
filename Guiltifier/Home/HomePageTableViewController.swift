@@ -76,7 +76,6 @@ class HomePageTableViewController: UITableViewController {
         var gottenTime = entries[entries.count-row-1].time!
         let stringIndex = gottenTime.index(gottenTime.startIndex, offsetBy: 15)
         gottenTime = String(gottenTime[...stringIndex])
-        print("time: ", gottenTime)
         cell.timeLabel.text = gottenTime
 
         return cell
