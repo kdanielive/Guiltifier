@@ -120,14 +120,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Guiltifier" id="ae3-2x-fCG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="DQW-Zv-G7m">
-                            <connections>
-                                <action selector="deleteAll:" destination="BYZ-38-t0r" id="R3S-l0-c9m"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="c2r-5Z-mUZ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-menu-50" id="c2r-5Z-mUZ">
                             <connections>
                                 <segue destination="TJ8-f7-6UX" kind="presentation" id="CIb-R9-40N"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="DQW-Zv-G7m">
+                            <connections>
+                                <action selector="deleteAll:" destination="BYZ-38-t0r" id="R3S-l0-c9m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -337,4 +337,7 @@
             <point key="canvasLocation" x="900" y="-573.46326836581716"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-menu-50" width="50" height="50"/>
+    </resources>
 </document>
