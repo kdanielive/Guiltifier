@@ -22,13 +22,9 @@ class HomePageTableViewController: UITableViewController {
         
         let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
         //userFetch.predicate = NSPredicate(format: "price = %@", "34")
-        entriesFetch.sortDescriptors = [NSSortDescriptor.init(key: "price", ascending: true)]
+        entriesFetch.sortDescriptors = [NSSortDescriptor.init(key: "time", ascending: true)]
         
         entries = try! managedContext.fetch(entriesFetch) as! [Entry]
-        
-        for ent in entries {
-            print(ent.price!)
-        }
         
         numRows = entries.count
         
@@ -55,7 +51,14 @@ class HomePageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return numRows
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return 0 }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
+        
+        entries = try! managedContext.fetch(entriesFetch) as! [Entry]
+        
+        return entries.count
     }
     
     
@@ -64,14 +67,23 @@ class HomePageTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homePageTableViewCell", for: indexPath) as! HomePageTableViewCell
 
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return cell }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
+        
+        entries = try! managedContext.fetch(entriesFetch) as! [Entry]
         // Configure the cell...
         let row = indexPath.row
-        print(row)
-        cell.priceLabel.text = entries[row].price!
+        cell.priceLabel.text = entries[entries.count-row-1].price!
+        
+        var gottenTime = entries[entries.count-row-1].time!
+        let stringIndex = gottenTime.index(gottenTime.startIndex, offsetBy: 15)
+        gottenTime = String(gottenTime[...stringIndex])
+        print("time: ", gottenTime)
+        cell.timeLabel.text = gottenTime
 
         return cell
     }
-    
 
     /*
     // Override to support conditional editing of the table view.

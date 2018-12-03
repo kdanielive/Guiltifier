@@ -30,12 +30,14 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         let price = priceTextField.text
+        let date = NSDate().description
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         let userEntity = NSEntityDescription.entity(forEntityName: "Entry", in: managedContext)!
         let newEntry = NSManagedObject(entity: userEntity, insertInto: managedContext)
         newEntry.setValue(price, forKeyPath: "price")
+        newEntry.setValue(date, forKeyPath: "time")
         
         do {
             try managedContext.save()
@@ -47,6 +49,18 @@ class ViewController: UIViewController {
         priceTextField.text = ""
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload"), object: nil)
+    }
+    @IBAction func deleteAll(_ sender: UIBarButtonItem) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
+        let request = NSBatchDeleteRequest(fetchRequest: fetch)
+        do {
+            try managedContext.execute(request)
+            print("succeeded")
+        } catch {
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
