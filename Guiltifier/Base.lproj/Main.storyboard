@@ -125,9 +125,9 @@
                                 <action selector="deleteAll:" destination="BYZ-38-t0r" id="R3S-l0-c9m"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="4ng-0e-oQ3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="c2r-5Z-mUZ">
                             <connections>
-                                <segue destination="TJ8-f7-6UX" kind="presentation" id="yhQ-Uw-IoL"/>
+                                <segue destination="TJ8-f7-6UX" kind="presentation" id="CIb-R9-40N"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
