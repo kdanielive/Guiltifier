@@ -13,13 +13,13 @@
         <!--Guiltifier-->
         <scene sceneID="KgK-KA-7P1">
             <objects>
-                <tableViewController id="862-qv-XVq" sceneMemberID="viewController">
+                <tableViewController id="862-qv-XVq" customClass="SummaryTableViewController" customModule="Guiltifier" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z0m-1I-Tw0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="486"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EE4-R2-xLN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EE4-R2-xLN" customClass="SummaryTableViewCell" customModule="Guiltifier" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EE4-R2-xLN" id="hxC-3c-Xsk">
@@ -162,7 +162,7 @@
                                             <rect key="frame" x="284" y="11" width="82" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="1" green="0.36082784205169594" blue="0.23497273732299784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="164" y="-572"/>
         </scene>
-        <!--View Controller-->
+        <!--Summary View Controller-->
         <scene sceneID="o5p-mY-3RH">
             <objects>
-                <viewController id="yNc-YN-Wdu" sceneMemberID="viewController">
+                <viewController id="yNc-YN-Wdu" customClass="SummaryViewController" customModule="Guiltifier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FnG-gf-4HN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

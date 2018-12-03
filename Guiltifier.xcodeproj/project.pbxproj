@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ABAC6BCF21B4C9A400295B7D /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */; };
 		ABAC6BD121B4C9B100295B7D /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */; };
+		ABAC6BD321B4CC0800295B7D /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BD221B4CC0800295B7D /* SummaryViewController.swift */; };
 		ABB9F5C821B0E44E005CB93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F5C721B0E44E005CB93E /* AppDelegate.swift */; };
 		ABB9F5CA21B0E44E005CB93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F5C921B0E44E005CB93E /* ViewController.swift */; };
 		ABB9F5CD21B0E44E005CB93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB9F5CB21B0E44E005CB93E /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		ABAC6BD221B4CC0800295B7D /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		ABB9F5C421B0E44E005CB93E /* Guiltifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guiltifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB9F5C721B0E44E005CB93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB9F5C921B0E44E005CB93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABAC6BD421B4CC0D00295B7D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9F5C921B0E44E005CB93E /* ViewController.swift */,
+				ABB9F5F821B0FA45005CB93E /* HomePageTableViewController.swift */,
+				ABB9F5FA21B0FA56005CB93E /* HomePageTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ABAC6BD521B4CC1100295B7D /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				ABAC6BD221B4CC0800295B7D /* SummaryViewController.swift */,
+				ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */,
+				ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
 		ABB9F5BB21B0E44E005CB93E = {
 			isa = PBXGroup;
 			children = (
@@ -107,13 +129,10 @@
 		ABB9F5C621B0E44E005CB93E /* Guiltifier */ = {
 			isa = PBXGroup;
 			children = (
-				ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */,
-				ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */,
+				ABAC6BD521B4CC1100295B7D /* Summary */,
+				ABAC6BD421B4CC0D00295B7D /* Home */,
 				ABB9F5C721B0E44E005CB93E /* AppDelegate.swift */,
-				ABB9F5C921B0E44E005CB93E /* ViewController.swift */,
 				ABB9F5CB21B0E44E005CB93E /* Main.storyboard */,
-				ABB9F5F821B0FA45005CB93E /* HomePageTableViewController.swift */,
-				ABB9F5FA21B0FA56005CB93E /* HomePageTableViewCell.swift */,
 				ABB9F5D121B0E44E005CB93E /* Assets.xcassets */,
 				ABB9F5D321B0E44E005CB93E /* LaunchScreen.storyboard */,
 				ABB9F5D621B0E44E005CB93E /* Info.plist */,
@@ -277,6 +296,7 @@
 				ABB9F5FB21B0FA56005CB93E /* HomePageTableViewCell.swift in Sources */,
 				ABB9F5D021B0E44E005CB93E /* Guiltifier.xcdatamodeld in Sources */,
 				ABB9F5CA21B0E44E005CB93E /* ViewController.swift in Sources */,
+				ABAC6BD321B4CC0800295B7D /* SummaryViewController.swift in Sources */,
 				ABB9F5C821B0E44E005CB93E /* AppDelegate.swift in Sources */,
 				ABAC6BCF21B4C9A400295B7D /* SummaryTableViewCell.swift in Sources */,
 				ABAC6BD121B4C9B100295B7D /* SummaryTableViewController.swift in Sources */,
