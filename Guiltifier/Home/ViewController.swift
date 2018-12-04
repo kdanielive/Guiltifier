@@ -35,22 +35,33 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         } else {
             let price = priceTextField.text
-            let date = Date().description(with: .current)
             
-            // block code for month
+            // block code for time
             let now = Date()
+            // month
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "LLLL"
-            let nameOfMonth = dateFormatter.string(from: now)
-            let month = nameOfMonth
+            dateFormatter.dateFormat = "MMMM"
+            let month = dateFormatter.string(from: now)
+            // day
+            dateFormatter.dateFormat = "dd"
+            let day = dateFormatter.string(from: now)
+            // clock
+            dateFormatter.dateFormat = "h:mm a"
+            let clock = dateFormatter.string(from: now)
+            // shortHand Month
+            dateFormatter.dateFormat = "MMM"
+            let shortMonth = dateFormatter.string(from: now)
+            
             
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
             let userEntity = NSEntityDescription.entity(forEntityName: "Entry", in: managedContext)!
             let newEntry = NSManagedObject(entity: userEntity, insertInto: managedContext)
             newEntry.setValue(price, forKeyPath: "price")
-            newEntry.setValue(date, forKeyPath: "time")
             newEntry.setValue(month, forKeyPath: "month")
+            newEntry.setValue(day, forKeyPath: "day")
+            newEntry.setValue(clock, forKeyPath: "clock")
+            newEntry.setValue(shortMonth, forKey: "shortMonth")
             
             do {
                 try managedContext.save()
