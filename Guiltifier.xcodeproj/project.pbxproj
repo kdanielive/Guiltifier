@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F82587F01A7934131859CB3 /* Pods_Guiltifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF05B1583A180B335784B26D /* Pods_Guiltifier.framework */; };
 		AB5B7B8021B5E37E004DC0E4 /* SummaryViewHelperFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B7B7F21B5E37E004DC0E4 /* SummaryViewHelperFile.swift */; };
+		AB651CC721B7271A00658037 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB651CC621B7271A00658037 /* MyNavigationController.swift */; };
 		ABAC6BCF21B4C9A400295B7D /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */; };
 		ABAC6BD121B4C9B100295B7D /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */; };
 		ABAC6BD321B4CC0800295B7D /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC6BD221B4CC0800295B7D /* SummaryViewController.swift */; };
@@ -49,6 +50,7 @@
 		50EE52F6CF5C7D40C8B770C3 /* Pods_GuiltifierTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuiltifierTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879A41EC886DD1AA0153C01D /* Pods-Guiltifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guiltifier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Guiltifier/Pods-Guiltifier.debug.xcconfig"; sourceTree = "<group>"; };
 		AB5B7B7F21B5E37E004DC0E4 /* SummaryViewHelperFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewHelperFile.swift; sourceTree = "<group>"; };
+		AB651CC621B7271A00658037 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		ABAC6BCE21B4C9A400295B7D /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		ABAC6BD021B4C9B100295B7D /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		ABAC6BD221B4CC0800295B7D /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				ABB9F5C921B0E44E005CB93E /* ViewController.swift */,
 				ABB9F5F821B0FA45005CB93E /* HomePageTableViewController.swift */,
 				ABB9F5FA21B0FA56005CB93E /* HomePageTableViewCell.swift */,
+				AB651CC621B7271A00658037 /* MyNavigationController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				ABB9F5FB21B0FA56005CB93E /* HomePageTableViewCell.swift in Sources */,
 				ABB9F5D021B0E44E005CB93E /* Guiltifier.xcdatamodeld in Sources */,
 				ABB9F5CA21B0E44E005CB93E /* ViewController.swift in Sources */,
+				AB651CC721B7271A00658037 /* MyNavigationController.swift in Sources */,
 				ABAC6BD321B4CC0800295B7D /* SummaryViewController.swift in Sources */,
 				ABB9F5C821B0E44E005CB93E /* AppDelegate.swift in Sources */,
 				AB5B7B8021B5E37E004DC0E4 /* SummaryViewHelperFile.swift in Sources */,

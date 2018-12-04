@@ -87,12 +87,14 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXF-YO-UrP">
                                         <rect key="frame" x="8" y="111" width="359" height="256"/>
-                                        <color key="backgroundColor" red="0.92035700410340682" green="0.9269095593836002" blue="0.96397344559585496" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.81217932824643779" green="0.81728884185003059" blue="0.85680456606217614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="256" id="NqZ-R1-Km1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <state key="normal" title="Charge :("/>
+                                        <state key="normal" title="Charge :(">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5RY-El-aoZ"/>
                                         </connections>
@@ -266,7 +268,7 @@
         <!--Main-->
         <scene sceneID="ffg-Mu-4jv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CnB-MD-685" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CnB-MD-685" customClass="MyNavigationController" customModule="Guiltifier" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Main" id="LYK-j3-fyT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Vc-LB-tr2">
@@ -468,8 +470,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uE4-84-3n4"/>
-        <segue reference="zQh-lM-VWU"/>
+        <segue reference="CIb-R9-40N"/>
         <segue reference="JIW-S5-fOa"/>
-        <segue reference="sQG-t9-OPL"/>
+        <segue reference="Gtd-AO-Dt9"/>
     </inferredMetricsTieBreakers>
 </document>
