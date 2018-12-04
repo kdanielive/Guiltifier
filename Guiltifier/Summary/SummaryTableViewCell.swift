@@ -10,6 +10,9 @@ import UIKit
 
 class SummaryTableViewCell: UITableViewCell {
 
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

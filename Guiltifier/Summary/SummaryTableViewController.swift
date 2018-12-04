@@ -37,15 +37,27 @@ class SummaryTableViewController: UITableViewController {
         return calculateRows(section: section)
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryTableViewCell", for: indexPath) as! SummaryTableViewCell
+        let entryDict = returnEntryDict()
+        
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        var dates = Array(entryDict.keys)
+        dates = dates.sorted()
+        
+        let date = trimTime(rawTime: entryDict[dates[section]]![row].time!, offset: 9)
+        
+        cell.priceLabel.text = entryDict[dates[section]]![row].price!
+        cell.timeLabel.text = date
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

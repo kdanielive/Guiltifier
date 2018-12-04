@@ -20,38 +20,51 @@ func calculateSections() -> Int {
     var entrySet = Set<String>()
     
     for entry in entries {
-        let rawTime = entry.time!
-        let stringIndex = rawTime.index(rawTime.startIndex, offsetBy: 9)
-        let date = String(rawTime[...stringIndex])
-        
+        let date = trimTime(rawTime: entry.time!, offset: 9)
         entrySet.insert(date)
     }
-    print(entrySet.count)
+    print("section num: ", entrySet.count)
     return entrySet.count
 }
 
 func calculateRows(section : Int) -> Int {
-    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return 0 }
+    let entryDict = returnEntryDict()
+    
+    var dates = Array(entryDict.keys)
+    dates = dates.sorted()
+    print(entryDict[dates[section]]!.count)
+ 
+    return entryDict[dates[section]]!.count
+}
+
+func returnEntryDict() -> [String:[Entry]] {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let managedContext = appDelegate.persistentContainer.viewContext
     let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
     let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
     
     var entryDict : [String:[Entry]] = [:]
     
-    
+    print(entries.count, "count")
     for entry in entries {
-        let rawTime = entry.time!
-        let stringIndex = rawTime.index(rawTime.startIndex, offsetBy: 9)
-        let date = String(rawTime[...stringIndex])
+        let date = trimTime(rawTime: entry.time!, offset: 6)
+        print("1: ", date)
         
         if(entryDict.keys.contains(date)) {
-            entryDict[date] = (entryDict[date]!.append(entry) as! [Entry])
+            entryDict[date]!.append(entry)
+            print("this shouldn't")
         } else {
             entryDict[date] = [entry]
+            print("this should print")
         }
     }
- 
-    print(entryDict[section]!.count)
     
-    return entryDict[section]!.count
+    return entryDict
+}
+
+func trimTime(rawTime: String, offset: Int) -> String {
+    let stringIndex = rawTime.index(rawTime.startIndex, offsetBy: offset)
+    let date = String(rawTime[...stringIndex])
+    
+    return date
 }
