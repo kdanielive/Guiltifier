@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         chargeButton.layer.cornerRadius = 5
         chargeButton.layer.borderWidth = 0.5
         chargeButton.layer.borderColor = UIColor.blue.cgColor
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
