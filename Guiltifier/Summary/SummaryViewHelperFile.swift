@@ -21,8 +21,7 @@ func calculateSections() -> Int {
     var entrySet = Set<String>()
     
     for entry in entries {
-        let date = trimTime(rawTime: entry.time!, offset: 9)
-        entrySet.insert(date)
+        entrySet.insert(entry.month!)
     }
     return entrySet.count
 }
@@ -46,12 +45,12 @@ func returnEntryDict() -> [String:[Entry]] {
     var entryDict : [String:[Entry]] = [:]
     
     for entry in entries {
-        let date = trimTime(rawTime: entry.time!, offset: 6)
+        let month = entry.month!
         
-        if(entryDict.keys.contains(date)) {
-            entryDict[date]!.append(entry)
+        if(entryDict.keys.contains(month)) {
+            entryDict[month]!.append(entry)
         } else {
-            entryDict[date] = [entry]
+            entryDict[month] = [entry]
         }
     }
     

@@ -48,12 +48,12 @@ class SummaryTableViewController: UITableViewController {
         var dates = Array(entryDict.keys)
         dates = dates.sorted()
         
-        var date = trimTime(rawTime: entryDict[dates[section]]!.reversed()[row].time!, offset: 30)
-        let stringIndex = date.index(date.startIndex, offsetBy: 19)
-        date = String(date[stringIndex...])
+        let entry = entryDict[dates[section]]!.reversed()[row]
+        
+        let clock = entry.clock!
         
         cell.priceLabel.text = "$ " + entryDict[dates[section]]!.reversed()[row].price!
-        cell.timeLabel.text = date
+        cell.timeLabel.text = clock
 
         // Configure the cell...
 
@@ -64,9 +64,12 @@ class SummaryTableViewController: UITableViewController {
         let entryDict = returnEntryDict()
         var dates = Array(entryDict.keys)
         dates = dates.sorted()
-        let date = trimTime(rawTime: entryDict[dates[section]]![0].time!, offset: 15)
+        let entry = entryDict[dates[section]]!.reversed()[0]
+        let month = entry.shortMonth!
+        let day = entry.day!
+        let year = entry.year!
         
-        return date
+        return month + " " + day + ", " + year
     }
 
     /*

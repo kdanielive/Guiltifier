@@ -42,6 +42,9 @@ class ViewController: UIViewController {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMMM"
             let month = dateFormatter.string(from: now)
+            // year
+            dateFormatter.dateFormat = "yyyy"
+            let year = dateFormatter.string(from: now)
             // day
             dateFormatter.dateFormat = "dd"
             let day = dateFormatter.string(from: now)
@@ -62,6 +65,8 @@ class ViewController: UIViewController {
             newEntry.setValue(day, forKeyPath: "day")
             newEntry.setValue(clock, forKeyPath: "clock")
             newEntry.setValue(shortMonth, forKey: "shortMonth")
+            newEntry.setValue(Date().description(with: .current), forKey: "time")
+            newEntry.setValue(year, forKey: "year")
             
             do {
                 try managedContext.save()

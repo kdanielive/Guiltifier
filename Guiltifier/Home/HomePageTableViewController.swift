@@ -74,13 +74,12 @@ class HomePageTableViewController: UITableViewController {
         cell.priceLabel.text = "$ " + entries[entries.count-row-1].price!
         
         let entry = entries[entries.count-row-1]
-        let month = entry.month!
         let day = entry.day!
         let year = entry.year!
-        let clock = entry.clock!
         let shortMonth = entry.shortMonth!
         
         let timeStatement = shortMonth + " " + day + ", " + year
+ 
         cell.timeLabel.text = timeStatement
 
         return cell
