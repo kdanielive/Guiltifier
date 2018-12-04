@@ -36,7 +36,13 @@ class ViewController: UIViewController {
         } else {
             let price = priceTextField.text
             let date = Date().description(with: .current)
-            print(date)
+            
+            // block code for month
+            let now = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "LLLL"
+            let nameOfMonth = dateFormatter.string(from: now)
+            let month = nameOfMonth
             
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
@@ -44,6 +50,7 @@ class ViewController: UIViewController {
             let newEntry = NSManagedObject(entity: userEntity, insertInto: managedContext)
             newEntry.setValue(price, forKeyPath: "price")
             newEntry.setValue(date, forKeyPath: "time")
+            newEntry.setValue(month, forKeyPath: "month")
             
             do {
                 try managedContext.save()

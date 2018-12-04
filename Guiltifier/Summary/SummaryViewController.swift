@@ -26,24 +26,14 @@ class SummaryViewController: UIViewController {
         var thisMonthPot = 0
         
         for entry in entries {
-            let rawTime = entry.time!
-            print(rawTime)
-            var stringIndex = rawTime.index(rawTime.startIndex, offsetBy: 8)
-            var date = String(rawTime[stringIndex...])
-            stringIndex = date.index(date.startIndex, offsetBy: 7)
-            date = String(date[...stringIndex])
-            print("Date: ", date)
-            
-            let currentTime = Date().description(with: .current)
-            print(currentTime)
-            stringIndex = currentTime.index(currentTime.startIndex, offsetBy: 8)
-            var currentDate = String(currentTime[stringIndex...])
-            stringIndex = currentDate.index(currentDate.startIndex, offsetBy: 7)
-            currentDate = String(currentDate[...stringIndex])
-            print("Current Date: ", currentDate)
-            
-            if(date == currentDate) {
-                print("yes")
+            let month = entry.month!
+            let now = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "LLLL"
+            let nameOfMonth = dateFormatter.string(from: now)
+            let currentMonth = nameOfMonth
+
+            if(month == currentMonth) {
                 thisMonthPot += Int(entry.price!)!
             }
 
