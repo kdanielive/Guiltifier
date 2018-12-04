@@ -27,6 +27,7 @@ class SummaryViewController: UIViewController {
         
         for entry in entries {
             let month = entry.month!
+            
             let now = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "LLLL"
