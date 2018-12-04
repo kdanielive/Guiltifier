@@ -40,7 +40,7 @@ class SummaryViewController: UIViewController {
 
         }
         
-        endLineLabel.text = "Total this week: $" + String(thisMonthPot)
+        endLineLabel.text = "Total this month: $" + String(thisMonthPot)
         
         
         // Do any additional setup after loading the view.
