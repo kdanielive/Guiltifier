@@ -231,7 +231,7 @@
             </objects>
             <point key="canvasLocation" x="164" y="134"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Menu-->
         <scene sceneID="rww-JX-qce">
             <objects>
                 <tableViewController id="WvR-gO-bCz" sceneMemberID="viewController">
@@ -307,7 +307,7 @@
                             <outlet property="delegate" destination="WvR-gO-bCz" id="9eu-SI-P2p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="plc-Uz-NMT"/>
+                    <navigationItem key="navigationItem" title="Menu" id="plc-Uz-NMT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crC-zN-4Xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
