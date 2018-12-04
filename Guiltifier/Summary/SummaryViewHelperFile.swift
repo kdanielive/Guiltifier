@@ -24,7 +24,6 @@ func calculateSections() -> Int {
         let date = trimTime(rawTime: entry.time!, offset: 9)
         entrySet.insert(date)
     }
-    print("section num: ", entrySet.count)
     return entrySet.count
 }
 
@@ -33,7 +32,6 @@ func calculateRows(section : Int) -> Int {
     
     var dates = Array(entryDict.keys)
     dates = dates.sorted()
-    print(entryDict[dates[section]]!.count)
  
     return entryDict[dates[section]]!.count
 }
@@ -50,7 +48,6 @@ func returnEntryDict() -> [String:[Entry]] {
     print(entries.count, "count")
     for entry in entries {
         let date = trimTime(rawTime: entry.time!, offset: 6)
-        print("1: ", date)
         
         if(entryDict.keys.contains(date)) {
             entryDict[date]!.append(entry)

@@ -16,6 +16,15 @@ class SummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
+        entriesFetch.sortDescriptors = [NSSortDescriptor.init(key: "time", ascending: true)]
+        let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
+        
+        for entry in entries {
+            
+        }
         
         
         // Do any additional setup after loading the view.
