@@ -71,11 +71,10 @@ class HomePageTableViewController: UITableViewController {
         entries = try! managedContext.fetch(entriesFetch) as! [Entry]
         // Configure the cell...
         let row = indexPath.row
-        cell.priceLabel.text = entries[entries.count-row-1].price!
+        cell.priceLabel.text = "$ " + entries[entries.count-row-1].price!
         
         var gottenTime = entries[entries.count-row-1].time!
-        let stringIndex = gottenTime.index(gottenTime.startIndex, offsetBy: 15)
-        gottenTime = String(gottenTime[...stringIndex])
+        gottenTime = trimTime(rawTime: gottenTime, offset: 15)
         cell.timeLabel.text = gottenTime
 
         return cell

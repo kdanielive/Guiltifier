@@ -48,9 +48,11 @@ class SummaryTableViewController: UITableViewController {
         var dates = Array(entryDict.keys)
         dates = dates.sorted()
         
-        let date = trimTime(rawTime: entryDict[dates[section]]![row].time!, offset: 9)
+        var date = trimTime(rawTime: entryDict[dates[section]]!.reversed()[row].time!, offset: 30)
+        let stringIndex = date.index(date.startIndex, offsetBy: 19)
+        date = String(date[stringIndex...])
         
-        cell.priceLabel.text = entryDict[dates[section]]![row].price!
+        cell.priceLabel.text = "$ " + entryDict[dates[section]]!.reversed()[row].price!
         cell.timeLabel.text = date
 
         // Configure the cell...
@@ -58,6 +60,14 @@ class SummaryTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let entryDict = returnEntryDict()
+        var dates = Array(entryDict.keys)
+        dates = dates.sorted()
+        let date = trimTime(rawTime: entryDict[dates[section]]![0].time!, offset: 15)
+        
+        return date
+    }
 
     /*
     // Override to support conditional editing of the table view.

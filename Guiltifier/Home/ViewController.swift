@@ -35,7 +35,8 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         } else {
             let price = priceTextField.text
-            let date = NSDate().description
+            let date = Date().description(with: .current)
+            print(date)
             
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext

@@ -15,6 +15,7 @@ func calculateSections() -> Int {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return 0 }
     let managedContext = appDelegate.persistentContainer.viewContext
     let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
+    entriesFetch.sortDescriptors = [NSSortDescriptor.init(key: "time", ascending: true)]
     let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
     
     var entrySet = Set<String>()
@@ -41,6 +42,7 @@ func returnEntryDict() -> [String:[Entry]] {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let managedContext = appDelegate.persistentContainer.viewContext
     let entriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
+    entriesFetch.sortDescriptors = [NSSortDescriptor.init(key: "time", ascending: true)]
     let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
     
     var entryDict : [String:[Entry]] = [:]
@@ -63,8 +65,11 @@ func returnEntryDict() -> [String:[Entry]] {
 }
 
 func trimTime(rawTime: String, offset: Int) -> String {
-    let stringIndex = rawTime.index(rawTime.startIndex, offsetBy: offset)
-    let date = String(rawTime[...stringIndex])
+    var stringIndex = rawTime.index(rawTime.startIndex, offsetBy: 8)
+    var date = String(rawTime[stringIndex...])
+    stringIndex = date.index(date.startIndex, offsetBy: offset)
+    date = String(date[...stringIndex])
+
     
     return date
 }
