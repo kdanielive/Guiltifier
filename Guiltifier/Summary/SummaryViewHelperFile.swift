@@ -51,10 +51,8 @@ func returnEntryDict() -> [String:[Entry]] {
         
         if(entryDict.keys.contains(date)) {
             entryDict[date]!.append(entry)
-            print("this shouldn't")
         } else {
             entryDict[date] = [entry]
-            print("this should print")
         }
     }
     
