@@ -23,7 +23,12 @@ class SummaryViewController: UIViewController {
         let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
         
         for entry in entries {
-            
+            let rawTime = entry.time!
+            var stringIndex = rawTime.index(rawTime.startIndex, offsetBy: 8)
+            var date = String(rawTime[stringIndex...])
+            stringIndex = date.index(date.startIndex, offsetBy: 10)
+            date = String(date[...stringIndex])
+            print("Date: ", date)
         }
         
         

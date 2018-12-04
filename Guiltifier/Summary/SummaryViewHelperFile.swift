@@ -45,7 +45,6 @@ func returnEntryDict() -> [String:[Entry]] {
     
     var entryDict : [String:[Entry]] = [:]
     
-    print(entries.count, "count")
     for entry in entries {
         let date = trimTime(rawTime: entry.time!, offset: 6)
         
