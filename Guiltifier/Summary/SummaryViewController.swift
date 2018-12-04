@@ -23,24 +23,24 @@ class SummaryViewController: UIViewController {
         entriesFetch.sortDescriptors = [NSSortDescriptor.init(key: "time", ascending: true)]
         let entries = try! managedContext.fetch(entriesFetch) as! [Entry]
         
-        var thisMonthPot = 0
+        var thisMonthPot = 0.0
         
         for entry in entries {
             let month = entry.month!
             
             let now = Date()
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "LLLL"
+            dateFormatter.dateFormat = "MMMM"
             let nameOfMonth = dateFormatter.string(from: now)
             let currentMonth = nameOfMonth
 
             if(month == currentMonth) {
-                thisMonthPot += Int(entry.price!)!
+                thisMonthPot += Double(entry.price!)!
             }
 
         }
         
-        endLineLabel.text = String(thisMonthPot)
+        endLineLabel.text = "Total this week: $" + String(thisMonthPot)
         
         
         // Do any additional setup after loading the view.
